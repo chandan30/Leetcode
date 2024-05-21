@@ -1,24 +1,18 @@
-public class Same {
-    
-}
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+ // Definition for a binary tree node.
+ public class Same {
+      int val;
+      Same left;
+      Same right;
+      Same() {}
+      Same(int val) { this.val = val; }
+      Same(int val, Same left, Same right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
 class Solution {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(Same p, Same q) {
         if(p==null && q==null)
         return true;
         if(p==null || q==null)

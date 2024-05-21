@@ -1,30 +1,27 @@
-package .git;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Inorder {
-    
-}
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+ // Definition for a binary tree node.
+  public class Inorder {
+      int val;
+      Inorder left;
+      Inorder right;
+      Inorder() {}
+      Inorder(int val) { this.val = val; }
+      Inorder(int val, Inorder left, Inorder right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
+ 
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(Inorder root) {
         List<Integer> result=new ArrayList<>();
         inorder(root,result);
         return result;
     }
-    public void inorder(TreeNode root,List result)
+    public void inorder(Inorder root,List result)
     {
         if(root==null)
         return ;

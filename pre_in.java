@@ -1,31 +1,28 @@
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+// Definition for a binary tree node.
+  public class pre_in {
+      int val;
+      pre_in left;
+      pre_in right;
+      pre_in() {}
+      pre_in(int val) { this.val = val; }
+      pre_in(int val, pre_in left, pre_in right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
 class Solution {
     private int idx;
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public pre_in buildTree(int[] preorder, int[] inorder) {
          int  n = preorder.length;
         idx = 0;
         return solve(preorder, inorder, 0, n-1);
     }
-    private  TreeNode solve(int[] preorder, int[] inorder, int start, int end)
+    private  pre_in solve(int[] preorder, int[] inorder, int start, int end)
     {
         if(start>end)
         return null;
-        TreeNode root=new TreeNode(preorder[idx]);
+        pre_in root=new pre_in(preorder[idx]);
         int i=start;
         for(;i<=end;i++)
         {
